@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Hub - Smart Health Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">💚 Wellness Hub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#tracker">Health Tracker</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Your Smart Health Companion</h1>
+            <p>Track your wellness, book appointments, and live a healthier life</p>
+            <button class="cta-btn" onclick="scrollToSection('tracker')">Get Started</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">📊</div>
+                    <h3>Health Tracking</h3>
+                    <p>Monitor your vital signs, daily activities, and health metrics in real-time</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">👨‍⚕️</div>
+                    <h3>Doctor Appointments</h3>
+                    <p>Book and manage appointments with healthcare professionals easily</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">💊</div>
+                    <h3>Medication Reminder</h3>
+                    <p>Never miss your medications with smart reminders</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon">🏋️</div>
+                    <h3>Fitness Plans</h3>
+                    <p>Personalized workout plans based on your health goals</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Tracker Section -->
+    <section id="tracker" class="tracker">
+        <div class="container">
+            <h2>Personal Health Tracker</h2>
+            <div class="tracker-form">
+                <div class="form-group">
+                    <label for="heart-rate">Heart Rate (bpm)</label>
+                    <input type="number" id="heart-rate" placeholder="Enter heart rate">
+                </div>
+                <div class="form-group">
+                    <label for="blood-pressure">Blood Pressure (mmHg)</label>
+                    <input type="text" id="blood-pressure" placeholder="120/80">
+                </div>
+                <div class="form-group">
+                    <label for="weight">Weight (kg)</label>
+                    <input type="number" id="weight" placeholder="Enter weight">
+                </div>
+                <div class="form-group">
+                    <label for="steps">Steps Walked</label>
+                    <input type="number" id="steps" placeholder="0">
+                </div>
+                <button class="submit-btn" onclick="saveHealthData()">Save Data</button>
+            </div>
+            <div id="tracker-results" class="tracker-results"></div>
+        </div>
+    </section>
+
+    <!-- Appointments Section -->
+    <section id="appointments" class="appointments">
+        <div class="container">
+            <h2>Book an Appointment</h2>
+            <div class="appointment-form">
+                <div class="form-group">
+                    <label for="patient-name">Your Name</label>
+                    <input type="text" id="patient-name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="doctor-select">Select Doctor</label>
+                    <select id="doctor-select">
+                        <option>-- Choose a Doctor --</option>
+                        <option>Dr. Sarah Johnson - Cardiology</option>
+                        <option>Dr. Michael Chen - General Practice</option>
+                        <option>Dr. Emily Rodriguez - Neurology</option>
+                        <option>Dr. James Wilson - Orthopedics</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="appt-date">Appointment Date</label>
+                    <input type="date" id="appt-date">
+                </div>
+                <div class="form-group">
+                    <label for="appt-time">Appointment Time</label>
+                    <input type="time" id="appt-time">
+                </div>
+                <button class="submit-btn" onclick="bookAppointment()">Book Appointment</button>
+            </div>
+            <div id="appointments-list" class="appointments-list"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>📞 Phone</h3>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📧 Email</h3>
+                    <p>support@wellnesshub.com</p>
+                </div>
+                <div class="contact-item">
+                    <h3>📍 Address</h3>
+                    <p>123 Health Street, Medical City, MC 12345</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Wellness Hub. All rights reserved. | Your health, our priority.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
